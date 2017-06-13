@@ -1,4 +1,0 @@
-_op3:    load R5 R1
-         add R5 R2
-         add R5 R3
-         return

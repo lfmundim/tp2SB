@@ -1,4 +1,0 @@
-_op4:    load R5 R1
-         multiply R5 R2
-         multiply R5 R3
-         return

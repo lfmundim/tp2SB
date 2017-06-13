@@ -1,6 +1,0 @@
-_op5:    load R5 R1
-         multiply R5 R2
-         multiply R5 R3
-         loadi R6 3
-         divide R5 R6
-         return
