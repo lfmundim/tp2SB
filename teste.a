@@ -1,0 +1,29 @@
+loadi R0 IO;carrega entrada em R0 -- OP
+loadi R1 IO;carrega entrada em R1 -- A
+loadi R2 IO;carrega entrada em R2 -- B
+loadi R3 IO;carrega entrada em R3 -- C
+loadi R4 _um
+subtract R4 R1
+jmpz R4 _OP1
+loadi R4 _dois
+subtract R4 R0
+jmpz R4 _OP2
+loadi R4 _tres
+subtract R4 R0
+jmpz R4 _OP3
+loadi R4 _quatro
+subtract R4 R0
+jmpz R4 _OP4
+loadi R4 _cinco
+subtract R4 R0
+jmpz R4 _OP5
+_OP1 call _op1
+_OP2 call _op2
+_OP3 call _op3
+_OP4 call _op4
+_OP5 call _op5
+_um .data 2 1
+_dois .data 2 2
+_tres .data 2 3
+_quatro .data 2 4
+_cinco .data 2 5
