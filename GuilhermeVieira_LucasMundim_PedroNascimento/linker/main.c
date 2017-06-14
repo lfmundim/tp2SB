@@ -28,10 +28,10 @@ void updateLabels(FILE* input, FILE* output, Lista labels){
 int main(int argc, char* argv[]){
     int num, largura, size = 0;
     int i = 2, j, k;
-    char *text, *label, *posicao, *numBin, *code;
+    char *text, *label, *posicao, *numBin, *code, *aux;
     Lista enderecos;
     FILE *temp, *file, *exit;
-    
+    aux = (char*)calloc(5, sizeof(char));
     temp = fopen("temp.txt", "wt");
     text = (char*)calloc(100,sizeof(char));
     numBin = (char*)calloc(8, sizeof(char));
@@ -68,6 +68,8 @@ int main(int argc, char* argv[]){
         fclose(file);
     }
     fclose(temp);
+    strcpy(aux, ".mif");
+    strcat(argv[1], aux);
     temp = fopen("temp.txt", "rt");
     exit = fopen(argv[1], "wt");
     

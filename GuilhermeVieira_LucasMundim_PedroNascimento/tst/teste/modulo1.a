@@ -1,14 +1,14 @@
-_op1:    load R5 R1
-         subtract R5 R2
-         jmpn R5 _maior1
-         load R5 R1
-         subtract R5 R3
-         jmpn R5 _maior2
+_op1:    load A5 A1
+         subtract A5 A2
+         jmpn A5 _maior1
+         load A5 A1
+         subtract A5 A3
+         jmpn A5 _maior2
          jump _endOP1
-_maior1: load R5 R2
-         subtract R5 R3
-         jmpn R5 _maior2
-         load R5 R1
+_maior1: load A5 A2
+         subtract A5 A3
+         jmpn A5 _maior2
+         load A5 A1
          jump _endOP1
-_maior2: load R5 R3
+_maior2: load A5 A3
 _endOP1: return

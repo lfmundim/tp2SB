@@ -1,6 +1,6 @@
-_op5:    load R5 R1
-         multiply R5 R2
-         multiply R5 R3
-         loadi R6 3
-         divide R5 R6
+_op5:    load A5 A1
+         multiply A5 A2
+         multiply A5 A3
+         loadi A6 3
+         divide A5 A6
          return

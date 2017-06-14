@@ -1,4 +1,4 @@
-_op3:    load R5 R1
-         add R5 R2
-         add R5 R3
+_op3:    load A5 A1
+         add A5 A2
+         add A5 A3
          return
