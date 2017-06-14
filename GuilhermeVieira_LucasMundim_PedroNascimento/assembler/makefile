@@ -14,7 +14,7 @@ mont: $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f mont assembler.o conversor.o lista.o main.o
+	rm -f mont assembler.o conversor.o lista.o main.o vgcore.*
 
 valgrind:
 	valgrind $(VFLAGS) $(EXEC)

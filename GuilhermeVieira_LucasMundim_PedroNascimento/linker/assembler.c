@@ -538,6 +538,7 @@ void traduz(FILE *exit, char *linha, int *PC){
         }
         
         grava(exit, PC, 8, 16, code);
+        free(code);
     }
     
     else if (strcmp(func,".data") == 0){ //caso .data
@@ -548,13 +549,12 @@ void traduz(FILE *exit, char *linha, int *PC){
         reg2 = atoi(&linha[i]);
         strcpy(code, convertNumber(reg2, 8*reg1));
         grava(exit, PC, 8, 8*reg1, code);
+        free(code);
     }
     
     free(address);
     free(func);
-    free(code);
 }
-
 
 
 

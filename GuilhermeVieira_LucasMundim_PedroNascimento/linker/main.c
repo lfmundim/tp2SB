@@ -27,7 +27,7 @@ void updateLabels(FILE* input, FILE* output, Lista labels){
 
 int main(int argc, char* argv[]){
     int num, largura, size = 0;
-    int i = 1, j, k;
+    int i = 2, j, k;
     char *text, *label, *posicao, *numBin, *code;
     Lista enderecos;
     FILE *temp, *file, *exit;
@@ -69,12 +69,12 @@ int main(int argc, char* argv[]){
     }
     fclose(temp);
     temp = fopen("temp.txt", "rt");
-    exit = fopen("saida.mif", "wt");
+    exit = fopen(argv[1], "wt");
     
     fprintf(exit, "DEPTH = 256;\nWIDTH = 8;\nADDRESS_RADIX = BIN;\nDATA_RADIX = BIN;\nCONTENT\nBEGIN\n\n");
     updateLabels(temp, exit, enderecos);//PASSO 2: SUBSTITUIR AS LABELS
     fprintf(exit, "[%s..11111111] : 00000000;\nEND;\n", convertNumber(size, 8));
-    
+    fclose(exit);
     desalocaLista(&enderecos);
     free(numBin);
     // system("rm temp.txt");
