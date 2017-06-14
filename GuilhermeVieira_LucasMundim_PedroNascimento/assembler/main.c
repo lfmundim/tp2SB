@@ -12,7 +12,16 @@ int main(int argc, char* argv[]){
     token = (char*)calloc(100,sizeof(char));
     text = (char*)calloc(1000,sizeof(char));
     file = fopen(argv[1], "rt");
+    // printf("ARGV1: %s\n", argv[1]);
+    if(file==NULL){
+        printf("ERRO(file)\n");
+        return(-1);
+    }
     exit = fopen(argv[2], "wt");
+    if(exit==NULL){
+        printf("ERRO(exit)\n");
+        return(-1);
+    }
     criaLista(&enderecos);
     
     

@@ -1,3 +1,8 @@
+.extern _op1
+.extern _op2
+.extern _op3
+.extern _op4
+.extern _op5
 loadi R0 IO;carrega entrada em R0 -- OP
 loadi R1 IO;carrega entrada em R1 -- A
 loadi R2 IO;carrega entrada em R2 -- B
