@@ -23,10 +23,15 @@ loadi R4 _cinco
 subtract R4 R0
 jmpz R4 _OP5
 _OP1: call _op1
+exit
 _OP2: call _op2
+exit
 _OP3: call _op3
+exit
 _OP4: call _op4
+exit
 _OP5: call _op5
+exit
 _um: .data 2 1
 _dois: .data 2 2
 _tres: .data 2 3
