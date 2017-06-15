@@ -55,6 +55,7 @@ for tst in "${TESTS_PATH}/"*/; do
         echo_dbg "${ASB_WORK_DIR}"/mont "$file" "${TEST_OUT_PATH}/${tstname}/${filename%.*}.o"
     done
     obj_lst=$(find "${TEST_OUT_PATH}/${tstname}/" -name *.o ! -name "main.o" )
+    echo -e ""${LNK_WORK_DIR}"/link "${TEST_OUT_PATH}/${tstname}/${tstname}" "${TEST_OUT_PATH}/${tstname}/main.o" ${obj_lst}"
     echo_dbg "${LNK_WORK_DIR}"/link "${TEST_OUT_PATH}/${tstname}/${tstname}" "${TEST_OUT_PATH}/${tstname}/main.o" ${obj_lst}
 done
 

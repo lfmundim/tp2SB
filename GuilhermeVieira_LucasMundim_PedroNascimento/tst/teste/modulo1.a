@@ -1,14 +1,20 @@
-_op1:    load A5 A1
+_op1:    clear A5
+         add A5 A1
          subtract A5 A2
          jmpn A5 _maior1
-         load A5 A1
+         clear A5
+         add A5 A1
          subtract A5 A3
          jmpn A5 _maior2
          jump _endOP1
-_maior1: load A5 A2
+_maior1: clear A5
+         add A5 A2
          subtract A5 A3
          jmpn A5 _maior2
-         load A5 A1
+         clear A5
+         add A5 A2
          jump _endOP1
-_maior2: load A5 A3
-_endOP1: return
+_maior2: clear A5
+         add A5 A3
+_endOP1: storei A5 IO
+         return
