@@ -8,7 +8,7 @@ loadi A1 IO;carrega entrada em A1 -- A
 loadi A2 IO;carrega entrada em A2 -- B
 loadi A3 IO;carrega entrada em A3 -- C
 loadi A4 _um
-subtract A4 A1
+subtract A4 A0
 jmpz A4 _OP1
 loadi A4 _dois
 subtract A4 A0
